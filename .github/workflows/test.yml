@@ -12,9 +12,9 @@ jobs:
             steps:
                 - uses: actions/checkout@v2
                 - name: Use Node.js ${{ matrix.node }}
-                uses: actions/setup-node@v1
-                with:
-                    node-version: ${{ matrix.node }}
+                    uses: actions/setup-node@v1
+                    with:
+                        node-version: ${{ matrix.node }}
                 - run: npm ci
                 - run: npm run build --if-present
                 - run: npm test  
